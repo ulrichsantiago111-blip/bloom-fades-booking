@@ -1,0 +1,65 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+/* Calendar custom styling */
+.rdp {
+  --rdp-accent-color: #f59e0b;
+  --rdp-background-color: #262626;
+}
+
+.rdp-day_selected {
+  background-color: #f59e0b !important;
+  color: #000 !important;
+}
+
+.rdp-day_selected:hover {
+  background-color: #d97706 !important;
+}
+
+.rdp-day:hover:not(.rdp-day_selected) {
+  background-color: #404040 !important;
+}
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: #404040;
+}
+
+.rdp-day_disabled {
+  opacity: 0.3;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Focus styles */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(245, 158, 11, 0.3);
+  color: white;
+}
